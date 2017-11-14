@@ -1,0 +1,83 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  bottom: 0;
+  margin: 0;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+section.container {
+  background-color: #333;
+  height: 100vh;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+}
+
+[ui-view]:not(.ng-enter):not(.ng-leave) section.container article.panel{
+  right: 50%;
+}
+
+article.panel{
+  background: #ecf0f1;
+  min-height: 500px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(158, 158, 158, 0.4), 0 1px 2px rgba(158, 158, 158, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+  transition: all ease-in 300ms;
+}
+
+[ui-view].ng-enter,
+[ui-view].ng-leave {
+  transition: all ease-in 300ms;
+}
+
+section.container article.panel h1{
+  font-size: 18px;
+}
+
+section.container article.panel button{
+  background-color: #3F51B5;
+  color: #FFF;
+  border : none;
+  border-radius: 4px;
+  padding: 1rem 2.5rem;
+}
+
+
+[ui-view].ng-enter section.container article.panel{
+  right: -50%;
+}
+
+[ui-view].ng-enter.ng-enter-active section.container article.panel{
+  right: 50%;
+}
+
+[ui-view].ng-leave section.container article.panel{
+  right: 50%;
+}
+[ui-view].ng-leave.ng-leave-active section.container article.panel{
+  right: 150%;
+}
+
+/*
+[ui-view].ng-leave section.container article.panel{
+  right: 50%;
+}
+
+*/

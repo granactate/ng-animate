@@ -1,0 +1,23 @@
+{
+  "name": "angular-animation-test",
+  "homepage": "https://github.com/scotch-io/scotch-box",
+  "authors": [
+    "Mario Nieto <granactate@gmail.com>"
+  ],
+  "description": "test for angular animate transition using angular ui.router",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.11",
+    "angular-animate": "^1.6.6"
+  }
+}
